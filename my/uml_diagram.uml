@@ -1,0 +1,53 @@
+@startuml
+
+package "core" {
+
+  class SessionManager {
+    +validate_user(uid, password): Account
+  }
+
+  class Account {
+    +uid: str
+    +role: str
+  }
+
+  class PatientHandler {
+    +insert_record(entry)
+    +erase_patient(pid)
+    +get_latest_visit(pid)
+    +total_visits_on(date)
+  }
+
+  class NoteDatabase {
+    +get_note_by_patient_and_visit(pid, vid)
+  }
+
+  class AuditTrail {
+    +record(user, role, activity)
+  }
+
+  class InsightEngine {
+    +visualize_age_distribution()
+  }
+
+  class HealthRecordUI {
+    +start()
+    +show_login()
+    +show_dashboard()
+    +add_patient()
+    +retrieve_patient()
+    +remove_patient()
+    +count_visits()
+    +view_notes()
+    +generate_statistics()
+  }
+
+  HealthRecordUI --> SessionManager
+  HealthRecordUI --> PatientHandler
+  HealthRecordUI --> NoteDatabase
+  HealthRecordUI --> AuditTrail
+  HealthRecordUI --> InsightEngine
+  SessionManager --> Account
+}
+
+@enduml
