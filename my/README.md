@@ -5,7 +5,7 @@ This Python application provides a simple clinical data interface that allows us
 - Analyze clinical note content
 - Track user session activity
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 my/
@@ -24,7 +24,7 @@ my/
 │   └── session_log.csv       # Logs of user activity
 ```
 
-## 🛠️ Setup & Execution
+##  Setup & Execution
 
 ### Prerequisites
 
@@ -48,7 +48,7 @@ python app_main.py
 
 This will launch the Tkinter-based GUI.
 
-## 🔐 Login Credentials
+##  Login Credentials
 
 Edit the `data/Credentials.csv` to manage user accounts. Example format:
 
@@ -58,17 +58,11 @@ admin,admin123,admin
 nurse,nurse123,nurse
 ```
 
-## 📊 Features
+##  Features
 
 - Count and view patient visits
 - Retrieve, add, or remove patient records
 - View clinical notes by date
 - Session logging for user audit trail
 
-## 📝 Notes
 
-All data is stored in CSV files inside the `data/` directory. Make sure these files exist and are correctly formatted before running the app.
-
-## 📌 Author
-
-Developed as part of an academic project for clinical data handling and auditing.
